@@ -10,18 +10,20 @@ public class DataAnalysis{
         int[] my_list= new int[number_of_data];
         int sum=0;
         System.out.println(String.format("Enter %d numbers one by one: ",number_of_data));
-
+        
+        //Calculates sum and stores data in a list
         for(int i=0;i<number_of_data;i++){
             int next_num= in.nextInt();
             my_list[i]= next_num;
             sum+=next_num;
         }
-
+        
+        //Prints sum and average
         System.out.println("Sum of the numbers is: " + sum);
         double avg=sum/number_of_data;
         System.out.println(String.format("Average of %d numbers is: "+ avg,number_of_data));
         
-
+        //Prints the numbers more than average with an "*".
         for(int i=0;i<number_of_data;i++){
             if(my_list[i]>avg){
                 System.out.println(my_list[i]+"*");
